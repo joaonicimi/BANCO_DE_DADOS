@@ -1,0 +1,67 @@
+-- create
+CREATE TABLE usuario (
+  id int,
+  nome VARCHAR(254),
+  cpf CHAR(14),
+  email VARCHAR(254),
+  data_nasc DATE,
+  primary key(id)
+);
+
+CREATE TABLE endereco (
+  id int,
+  user_id int,
+  rua VARCHAR(254),
+  cidade VARCHAR(100),
+  estado CHAR(2),
+  primary key (id),
+  foreign key (user_id) references usuario(id)
+);
+
+-- insert usuario
+INSERT INTO usuario VALUES (1, 'Lucas Silva', '12345678901', 'lucas.silva@email.com', '1990/05/15');
+INSERT INTO usuario VALUES (2, 'Maria Oliveira', '23456789012', 'maria.oliveira@email.com', '1985/10/22');
+INSERT INTO usuario VALUES (3, 'Pedro Santos', '34567890123', 'pedro.santos@email.com', '1992/01/30');
+INSERT INTO usuario VALUES (4, 'Ana Costa', '45678901234', 'ana.costa@email.com', '1998/07/12');
+INSERT INTO usuario VALUES (5, 'Bruno Souza', '56789012345', 'bruno.souza@email.com', '1988/03/05');
+INSERT INTO usuario VALUES (6, 'Carla Rocha', '67890123456', 'carla.rocha@email.com', '1995/12/18');
+INSERT INTO usuario VALUES (7, 'Diego Lima', '78901234567', 'diego.lima@email.com', '1991/06/25');
+INSERT INTO usuario VALUES (8, 'Fernanda Dias', '89012345678', 'fernanda.dias@email.com', '1983/09/09');
+INSERT INTO usuario VALUES (9, 'Gabriel Mello', '90123456789', 'gabriel.mello@email.com', '2000/02/14');
+INSERT INTO usuario VALUES (10, 'Juliana Alves', '10123456780', 'juliana.alves@email.com', '1994/11/03');
+INSERT INTO usuario VALUES (11, 'Tiago Ribeiro', '11223344556', 'tiago.ribeiro@email.com', '1997/08/21');
+INSERT INTO usuario VALUES (12, 'Camila Mendes', '22334455667', 'camila.mendes@email.com', '1989/04/10');
+INSERT INTO usuario VALUES (13, 'Rafael Cardoso', '33445566778', 'rafael.cardoso@email.com', '1993/11/05');
+INSERT INTO usuario VALUES (14, 'Beatriz Farias', '44556677889', 'beatriz.farias@email.com', '2001/01/20');
+INSERT INTO usuario VALUES (15, 'Leonardo Nogueira', '55667788990', 'leonardo.nogueira@email.com', '1986/07/30');
+INSERT INTO usuario VALUES (16, 'Amanda Teixeira', '66778899001', 'amanda.teixeira@email.com', '1996/09/15');
+INSERT INTO usuario VALUES (17, 'Rodrigo Monteiro', '77889900112', 'rodrigo.monteiro@email.com', '1990/12/05'); 
+INSERT INTO usuario VALUES (18, 'Leticia Barros', '88990011223', 'leticia.barros@email.com', '1984/05/28');
+INSERT INTO usuario VALUES (19, 'Marcelo Pires', '99001122334', 'marcelo.pires@email.com', '1999/03/17');
+INSERT INTO usuario VALUES (20, 'Vanessa Castro', '00112233445', 'vanessa.castro@email.com', '1995/08/08');
+
+-- insert endereco
+INSERT INTO endereco VALUES (1, 1, 'Rua das Flores, 123', 'São Paulo', 'SP');
+INSERT INTO endereco VALUES (2, 2, 'Avenida Central, 456', 'Rio de Janeiro', 'RJ');
+INSERT INTO endereco VALUES (3, 3, 'Rua da Paz, 789', 'Belo Horizonte', 'MG');
+INSERT INTO endereco VALUES (4, 4, 'Travessa dos Pássaros, 12', 'Curitiba', 'PR');
+INSERT INTO endereco VALUES (5, 5, 'Alameda dos Anjos, 34', 'Porto Alegre', 'RS');
+INSERT INTO endereco VALUES (6, 6, 'Rua do Sol, 56', 'Salvador', 'BA');
+INSERT INTO endereco VALUES (7, 7, 'Avenida Brasil, 78', 'Recife', 'PE');
+INSERT INTO endereco VALUES (8, 8, 'Rua das Palmeiras, 90', 'Fortaleza', 'CE');
+INSERT INTO endereco VALUES (9, 9, 'Quadra 104 Sul, Lote 5', 'Brasília', 'DF');
+INSERT INTO endereco VALUES (10, 10, 'Avenida Goiás, 11', 'Goiânia', 'GO');
+INSERT INTO endereco VALUES (11, 11, 'Rua Amazonas, 22', 'Manaus', 'AM');
+INSERT INTO endereco VALUES (12, 12, 'Travessa do Comércio, 33', 'Belém', 'PA');
+INSERT INTO endereco VALUES (13, 13, 'Rua da Praia, 44', 'Vitória', 'ES');
+INSERT INTO endereco VALUES (14, 14, 'Rodovia das Dunas, 55', 'Natal', 'RN');
+INSERT INTO endereco VALUES (15, 15, 'Avenida Beira Mar, 66', 'Florianópolis', 'SC');
+INSERT INTO endereco VALUES (16, 16, 'Rua dos Navegantes, 77', 'João Pessoa', 'PB');
+INSERT INTO endereco VALUES (17, 17, 'Ladeira do Pelourinho, 88', 'Maceió', 'AL');
+INSERT INTO endereco VALUES (18, 18, 'Rua das Águas, 99', 'Aracaju', 'SE');
+INSERT INTO endereco VALUES (19, 19, 'Avenida Frei Serafim, 100', 'Teresina', 'PI');
+INSERT INTO endereco VALUES (20, 20, 'Rua das Pedras, 200', 'Cuiabá', 'MT');
+
+-- fetch 
+SELECT * FROM usuario;
+SELECT * FROM endereco;
